@@ -61,6 +61,8 @@ jobs:
           PUBLIC_URL: /pages-lesson
       - name: Activate Assets
         run: touch "./dist/.nojekyll"
+      - name: ls
+        run: ls -a
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
