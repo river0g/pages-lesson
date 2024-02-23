@@ -59,6 +59,8 @@ jobs:
         run: npm ci && npm run build
         env:
           PUBLIC_URL: /pages-lesson
+      - name: Activate Assets
+        run: touch "./dist/.nojekyll"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
